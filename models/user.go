@@ -1,16 +1,16 @@
 package models
 
 import (
- 	"time"
+	"time"
 )
 
 type (
 	User struct {
-		Name      string     `json:"name" bson:"name"`
-		Gender    string     `json:"gender" bson:"gender"`
-		Age       int        `json:"age" bson:"age"`
-		Created   time.Time  `json:"created" bson:"created"`
+		Id          int        `json:"id"`
+		Name      	string     `json:"name"`
+		Gender    	string     `json:"gender"`
+		Age       	int        `json:"age"`
+		Created     time.Time  `json:"created_on"`
+		Updated     time.Time  `json:"updated_on"`
 	}
 )
-
-type Users []User
