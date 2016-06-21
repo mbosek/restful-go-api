@@ -1,4 +1,5 @@
 package repositories
+//TODO: check crud for mongo
 // //
 // // import (
 // // 	"gopkg.in/mgo.v2"

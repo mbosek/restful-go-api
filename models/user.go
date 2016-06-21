@@ -1,8 +1,8 @@
 package models
 
-import (
-	"time"
-)
+// import (
+	// "time"
+// )
 
 type (
 	User struct {
@@ -10,7 +10,7 @@ type (
 		Name      	string     `json:"name"`
 		Gender    	string     `json:"gender"`
 		Age       	int        `json:"age"`
-		Created     time.Time  `json:"created_on"`
-		Updated     time.Time  `json:"updated_on"`
+		// Created     time.Time  `json:"created_on"`
+		// Updated     time.Time  `json:"updated_on"`
 	}
 )

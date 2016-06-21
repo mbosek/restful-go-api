@@ -14,16 +14,12 @@ import (
 
 func main() {
 
-	var (
-		ctx context.Context
-	)
-
+	var ctx context.Context
 	ctx, _ = context.WithCancel(context.Background())
 
 	repositories.Register("mysql", repositories.NewRepository("go"))
-
-	crud.Register(ctx, "mysql", models.User{})
-	crud.Register(ctx, "mysql", models.Book{})
+	modelCtrl := crud.New(ctx, "mysql", models.User{})
+	modelCtrl.AddActions()
 
 	log.Fatal(http.ListenAndServe(":8080", router.New()))
 }
